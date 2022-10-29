@@ -1,0 +1,41 @@
+.answer-container {
+  position: relative;
+  margin-bottom: 3px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #000;
+}
+
+.field {
+  display: flex;
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #000;
+  overflow: hidden;
+}
+.field img {
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0);
+}
+.field span {
+  padding: 5px;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+.false {
+  background-color: red;
+}
+
+.true {
+  background-color: rgb(1, 246, 83);
+}
+
+.country-name span, .country-con span {
+  margin: 0 5px;
+}/*# sourceMappingURL=TableRow.css.map */

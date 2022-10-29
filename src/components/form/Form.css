@@ -1,0 +1,41 @@
+.form-container {
+  position: relative;
+  height: 100%;
+}
+.form-container input {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  font-size: 18px;
+  font-family: "Manrope", sans-serif;
+  padding: 5px;
+  border: 3px solid #000;
+  background-color: #fff;
+}
+.form-container .option-list {
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  max-height: 300px;
+  overflow-y: scroll;
+  z-index: 5;
+}
+.form-container .option-list .option {
+  display: flex;
+  padding: 10px 2px;
+  align-items: center;
+  width: 300px;
+  cursor: pointer;
+}
+.form-container .option-list .option img {
+  display: inline-block;
+  max-height: 40px;
+  width: 50px;
+}
+.form-container .option-list .option li {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  color: #fff;
+}/*# sourceMappingURL=Form.css.map */
