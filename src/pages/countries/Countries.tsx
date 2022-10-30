@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import TableHead from "../../components/tablehead/TableHead";
 import TableRow from "../../components/tablerow/TableRow";
 import Form from "../../components/form/Form";
@@ -35,29 +36,31 @@ const Countries = () => {
         setRandom(randomCountry);
     };
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const url = 'https://restcountries.com/v3.1/all?fields=name,area,population,continents,flags,landlocked,latlng';
-                const response = await fetch(url);
-                const datas: CountryType[] = await response.json();
-                datas.sort((a, b) => {
-                    if (a.name.common > b.name.common) {
-                        return 1;
-                    } else {
-                        return -1;
-                    };
-                });
-                randomize(datas);
-                setData(datas);
-            } catch (err) {
-                console.log(err);
-            };
+    const fetchData = useCallback(
+        async () => {
+        try {
+            const url = 'https://restcountries.com/v3.1/all?fields=name,area,population,continents,flags,landlocked,latlng';
+            const response = await fetch(url);
+            const datas: CountryType[] = await response.json();
+            datas.sort((a, b) => {
+                if (a.name.common > b.name.common) {
+                    return 1;
+                } else {
+                    return -1;
+                };
+            });
+            randomize(datas);
+            setData(datas);
+        } catch (err) {
+            console.log(err);
         };
-        fetchData();
     }, []);
 
-    const handleSubmit = (value: string) => {
+    useEffect(() => {
+        fetchData();
+    }, [fetchData]);
+
+    const handleSubmit = (value: string): void => {
         if (!random) return
         const guess: CountryType = data[data.findIndex((el: {name: {common: string}}) => el.name.common === value)];
         if (guess.name.common === random.name.common) {
@@ -69,11 +72,19 @@ const Countries = () => {
         setData(data.filter((el) => el.name.common !== value));
     };
 
+    const restartGame = (): void => {
+        fetchData();
+        setWrongGuess([]);
+        setProgress(true);
+    };
+
     return (
         <div className="countries-container">
+            <Link to="/"><p className="countries-back">Go back</p></Link>
             <div className="countries-title">
                 <p className="countries-title-upper">You selected <span>Countries Quiz!</span></p>
                 <p className="countries-title-lower">Guess the random country:</p>
+                <p className="countries-reset" onClick={restartGame}>Restart game</p>
             </div>
             {progress && <Form data={data} onSubmit={handleSubmit} />}
             {!progress && <p className="win">You've won!</p>}

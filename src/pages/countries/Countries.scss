@@ -2,10 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
+    .countries-back {
+        position: absolute;
+        top: 70px;
+        left: 400px;
+        font-family: 'Manrope', sans-serif;
+        color: #fff;
+    }
 
     .countries-title {
         display: flex;
+        position: relative;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
@@ -30,10 +39,19 @@
             color: #fff;
         }
     }
-
+    
     .win {
         font-family: 'Manrope', sans-serif;
         font-size: 30px;
         color: rgb(1, 246, 83);
+    }
+
+    .countries-reset {
+        position: absolute;
+        bottom: 48px;
+        left: -20px;
+        font-family: 'Manrope', sans-serif;
+        color: #fff;
+        cursor: pointer;
     }
 }
