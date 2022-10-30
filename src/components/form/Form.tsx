@@ -15,7 +15,7 @@ const Form = ({ data, onSubmit }: PropTypes) => {
         removeElements();
         let arr: CountryType[] = [];
         data.forEach(country => {
-            if (country.name.common.toLowerCase().startsWith(inputRef.current!.value.toLowerCase()) && inputRef.current!.value != "") {
+            if (country.name.common.toLowerCase().startsWith(inputRef.current!.value.toLowerCase()) && inputRef.current!.value !== "") {
                 arr.push(country)
             };
         });
@@ -46,7 +46,7 @@ const Form = ({ data, onSubmit }: PropTypes) => {
                 <ul className="option-list">
                     {menu.map((el, i) => 
                         <div className='option' key={i} onClick={() => displayCountry(el.name.common)}>
-                            <img className='option-flag' src={el.flags.svg} alt="Country flag" />
+                            <img className='option-flag' src={el.flags.png} alt="Country flag" />
                             <li className='option-item'>{el.name.common}</li>
                         </div>
                     )}

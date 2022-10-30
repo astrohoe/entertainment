@@ -38,4 +38,8 @@
   font-family: "Manrope", sans-serif;
   font-size: 14px;
   color: #fff;
+  background-color: rgba(255, 0, 0, 0);
+}
+.form-container .option-list .option:hover {
+  background-color: rgb(18, 46, 95);
 }/*# sourceMappingURL=Form.css.map */

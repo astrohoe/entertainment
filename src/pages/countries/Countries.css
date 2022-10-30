@@ -3,8 +3,7 @@
   flex-direction: column;
   align-items: center;
 }
-
-.countries-title {
+.countries-container .countries-title {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -13,17 +12,22 @@
   max-width: 700px;
   height: 350px;
 }
-.countries-title .countries-title-upper {
+.countries-container .countries-title .countries-title-upper {
   font-family: "Manrope", sans-serif;
   font-size: 60px;
   color: #fff;
 }
-.countries-title .countries-title-upper span {
+.countries-container .countries-title .countries-title-upper span {
   color: rgb(184, 0, 0);
   font-size: 80px;
 }
-.countries-title .countries-title-lower {
+.countries-container .countries-title .countries-title-lower {
   font-family: "Manrope", sans-serif;
   font-size: 20px;
   color: #fff;
+}
+.countries-container .win {
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+  color: rgb(1, 246, 83);
 }/*# sourceMappingURL=Countries.css.map */

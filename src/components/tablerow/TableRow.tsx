@@ -1,4 +1,3 @@
-import { randomInt } from 'crypto';
 import { CountryType } from '../../pages/countries/Countries';
 import './TableRow.css';
 
@@ -11,7 +10,7 @@ const TableRow = ({ guess, random }: PropTypes) => {
     return (
         <div className="answer-container">
             <div className="field country-flag">
-                <img src={guess.flags.svg} />
+                <img src={guess.flags.png} alt="flag" />
             </div>
             {guess.name.common === random.name.common && <div className="field country-name true"><span>{guess.name.common}</span></div>}
             {guess.name.common !== random.name.common && <div className="field country-name false"><span>{guess.name.common}</span></div>}
