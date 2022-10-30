@@ -1,0 +1,55 @@
+.reaction-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.reaction-container .reaction-back {
+  position: absolute;
+  top: 80px;
+  left: 400px;
+  font-family: "Manrope", sans-serif;
+  color: #fff;
+}
+.reaction-container .reaction-title {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  height: 250px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.reaction-container .reaction-title .reaction-title-upper {
+  margin-bottom: 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 60px;
+  color: #fff;
+}
+.reaction-container .reaction-title .reaction-title-upper span {
+  color: rgb(184, 0, 0);
+  font-style: italic;
+}
+.reaction-container .reaction-title p {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+.reaction-container .square-container {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+}
+.reaction-container .square-container .square-red {
+  border: 2px solid #000;
+  height: 100%;
+  background-color: red;
+}
+.reaction-container .square-container .square-green {
+  display: flex;
+  border: 2px solid #000;
+  height: 100%;
+  background-color: rgb(8, 234, 8);
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=Reaction.css.map */

@@ -80,7 +80,7 @@ const Countries = () => {
 
     return (
         <div className="countries-container">
-            <Link to="/"><p className="countries-back">Go back</p></Link>
+            <Link to="/"><p className="countries-back">&#8592; Go back</p></Link>
             <div className="countries-title">
                 <p className="countries-title-upper">You selected <span>Countries Quiz!</span></p>
                 <p className="countries-title-lower">Guess the random country:</p>

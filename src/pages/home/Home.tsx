@@ -10,8 +10,8 @@ const Home = () => {
                 <p className="title-lower">Please choose a game:</p>
             </div>
             <div className="link-container">
-                <Link to="./countries"><button className="countries">Countries quiz</button></Link>
-                <button className="reaction-button">Reaction time</button>
+                <Link to="/countries"><button className="countries">Countries quiz</button></Link>
+                <Link to="/reaction"><button className="reaction-button">Reaction time</button></Link>
                 <button className="home-button">Home</button>
             </div>
             <div className="main-container"></div>

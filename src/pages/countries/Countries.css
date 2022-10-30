@@ -29,6 +29,7 @@
 .countries-container .countries-title .countries-title-upper span {
   color: rgb(184, 0, 0);
   font-size: 80px;
+  font-style: italic;
 }
 .countries-container .countries-title .countries-title-lower {
   font-family: "Manrope", sans-serif;
